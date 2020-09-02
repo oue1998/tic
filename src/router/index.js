@@ -26,8 +26,6 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(to, from, next)
-  console.log(to.name )
   if (to.name !== 'Home' && from.name == null) next({ name: 'Home' })
   else next()
 })
